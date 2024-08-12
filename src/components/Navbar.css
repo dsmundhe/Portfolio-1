@@ -1,0 +1,129 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+.logoheading{
+  font-size: 3rem;
+  color: #00ced1;
+}
+.navbar button {
+  background-color: transparent;
+  border: none;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  padding: 0 40px;
+}
+.navbar .logo h1{
+  font-size: 2.2rem;
+}
+
+.navbar .btn {
+  font-size: 30px;
+  display: none;
+}
+
+.list ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 10px;
+}
+
+.list ul li {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(161, 154, 154);
+  cursor: pointer;
+}
+
+.list ul li:hover {
+  color: #000;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 0 30px;
+  }
+
+  .navbar .list1 ul {
+    display: block;
+    position: absolute;
+    left: 15px;
+    transition: 2s all ease-in-out;
+  }
+
+  .navbar .btn {
+    display: block;
+    transition: 0.3s all;
+  }
+
+  .list1 ul {
+    flex-direction: column;
+    background-color: rgb(229, 239, 248);
+    border-radius: 5px;
+    padding: 10px;
+    list-style: none;
+  }
+
+  .list ul {
+    display: none;
+  }
+
+  .list1 ul li {
+    margin: 10px 0;
+    background-color: aqua;
+    width: 290px;
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+    border-radius: 5px;
+  }
+
+  .list1 ul li:hover {
+    background-color: #00ced1; /* Change to a slightly darker color on hover */
+    color: #fff; /* Change text color on hover */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar ul li {
+    padding: 10px;
+  }
+
+  .navbar svg {
+    font-size: 30px;
+  }
+
+  .list1 ul li {
+    font-size: 1rem;
+    margin: 8px 0;
+  }
+
+  .list {
+    display: none;
+  }
+
+  .list1 ul li:hover {
+    background-color: #00ced1; /* Change to a slightly darker color on hover */
+    color: #fff; /* Change text color on hover */
+  }
+}

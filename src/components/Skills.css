@@ -1,0 +1,292 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1.5;
+  }
+}
+.skillbox {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  animation: fadeIn 2s ease-in;
+}
+ 
+.upline {
+  height: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upline1 {
+  width: 80vw;
+  background-color: black;
+  height: 1px;
+}
+.skillbox .skillheading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skillbox .skillheading h1 {
+  margin-bottom: 5px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .skillbox {
+    margin-top: 200px;
+  }
+
+  .upline {
+    width: 90vw;
+  }
+
+  .skillbox .skillheading h1 {
+    font-size: 1.5rem;
+  }
+  .skillbox .skillheading  p{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .skillbox {
+    margin-top: 100px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .upline {
+    width: 90vw;
+  }
+
+  .skillbox .skillheading h1 {
+    font-size: 1.3rem;
+  }
+  .skillbox .skillheading  p{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillbox {
+    margin-top: 300px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .upline {
+    width: 95vw;
+  }
+
+  .skillbox .skillheading h1 {
+    font-size: 1.2rem;
+  }
+  .skillbox .skillheading  p{
+    display: none;
+  }
+  
+}
+@media (max-width: 430px) {
+  .skillbox {
+    margin-top: 300px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .upline {
+    width: 95vw;
+  }
+
+  .skillbox .skillheading h1 {
+    font-size: 1.2rem;
+  }
+  .skillbox .skillheading  p{
+    display: none;
+  }
+  .box{
+    height: 500px;
+  width: 50px; 
+  }
+}
+@media (max-width: 360px) {
+  .skillbox {
+    margin-top: 280px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .upline {
+    width: 95vw;
+  }
+
+  .skillbox .skillheading h1 {
+    font-size: 1.2rem;
+  }
+  .skillbox .skillheading  p{
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .skillbox {
+    margin-top: 550px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .upline {
+    width: 95vw;
+  }
+
+  .skillbox .skillheading h1 {
+    font-size: 1.2rem;
+  }
+  .skillbox .skillheading  p{
+    display: none;
+  }
+  .box{
+    height: 500px;
+  width: 50px; 
+  }
+}
+
+.box {
+  padding: 20px;
+  height: 100px;
+  width: 90px; /* Adjust the height as needed */
+  border: 2px solid #ccc; /* Border around the box */
+  border-radius: 10px; /* Rounded corners for the box */
+  overflow: hidden; /* Ensure the image stays within the box */
+  display: flex; /* Center the image within the box */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  flex-direction: column;
+}
+
+.box h3{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+color: rgb(51, 48, 48);
+}
+.box img {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.skillicons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.skillicons .upper,
+.bottom,
+.bottom1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+.box:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 15px aqua;
+  border-radius: 20px;
+  border: 2px solid #232222;
+}
+
+/* New part for responsive box */
+@media (max-width: 768px) {
+  .box {
+    width: 55px;
+     height: 60px;
+    padding: 3px;
+    /* Allow height to adjust based on content */
+  }
+.box img{
+  width:100%;
+}
+.box h3{
+  display: none;
+}
+  .skillicons .upper,
+  .bottom,
+  .bottom1 {
+   
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    width: 55px;
+    height: 60px;
+    padding: 3px;
+     
+  }
+.box img{
+  width:100%;
+}
+.box h3{
+  display: none;
+}
+  .skillicons .upper,
+  .bottom,
+  .bottom1 {
+     
+    gap: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .box {
+    width: 55px;
+    height: 60px;
+    padding: 3px;
+   
+    /* Allow height to adjust based on content */
+  }
+.box img{
+  width:100%;
+}
+.box h3{
+  display: none;
+}
+  .skillicons .upper,
+  .bottom,
+  .bottom1 {
+    
+    gap: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .box {
+    width: 55px;
+    height: 60px;
+    padding: 3px;
+    /* Allow height to adjust based on content */
+  }
+.box img{
+  width:100%;
+}
+.box h3{
+  display: none;
+}
+
+  .skillicons .upper,
+  .bottom,
+  .bottom1 {
+     
+    gap: 20px;
+  }
+}

@@ -1,0 +1,102 @@
+/* Contact.css */
+
+ 
+
+.formbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+  padding: 20px;
+ 
+}
+
+/* .upline {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.upline1 {
+  width: 100px;
+  height: 5px;
+  background-color: #3498db;
+  animation: slideIn 2s ease-in-out forwards;
+} */
+
+.contact-form {
+  border-radius: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  max-width: 700px;
+  width: 100%;
+}
+
+.contact-form h1 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.contact-form button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.submitted-message {
+  color: green;
+  font-size: 18px;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}

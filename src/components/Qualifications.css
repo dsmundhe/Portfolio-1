@@ -1,0 +1,115 @@
+/* Qualifications.css */
+
+.qulibox {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+margin-bottom: 50px;
+  border-radius: 10px;
+ 
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.heading p {
+  font-size: 1.2em;
+  color: #777;
+}
+
+.qulimainbox {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.leftbox,
+.rightbox {
+  flex: 1;
+ 
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.education h2,
+.work h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #08e3ee;
+  display: flex;
+  align-items: center;
+}
+
+.education h2 svg,
+.work h2 svg {
+  margin-left: 10px;
+}
+
+.education div,
+.work div {
+  margin-bottom: 20px;
+}
+
+.education h3,
+.work h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.education p,
+.work p {
+  font-size: 1em;
+  color: #777;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .qulimainbox {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .leftbox,
+  .rightbox {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading h1 {
+    font-size: 1.5em;
+  }
+
+  .heading p {
+    font-size: 1em;
+  }
+
+  .education h2,
+  .work h2 {
+    font-size: 1.2em;
+  }
+
+  .education h3,
+  .work h3 {
+    font-size: 1em;
+  }
+
+  .education p,
+  .work p {
+    font-size: 0.9em;
+  }
+}
