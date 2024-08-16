@@ -1,51 +1,53 @@
+// ContactForm.js
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
-import './Contact.css';
+import './Contact.css'; // Import the CSS file
 
-const Contact = () => {
+const ContactForm = () => {
+  const [formData, setFormData] = useState({ email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-    emailjs.sendForm('service_f88m34e', 'template_gyetoot', e.target, 'lBggOeWVsV32N0e7D')
-      .then((result) => {
-          console.log(result.text);
-          setSubmitted(true);
-      }, (error) => {
-          console.log(error.text);
-      });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    setSubmitted(true);
+    // Reset form data
+    setFormData({ email: '', message: '' });
   };
 
   return (
-    <div className='formbox'>
-      <div className="upline">
-        <div className="upline1"></div>
-      </div>
-      <div className="contact-form">
-        <h1>Contact Me</h1>
-        {submitted ? (
-          <p className="submitted-message">Submitted!</p>
-        ) : (
-          <form onSubmit={sendEmail}>
-            <label>
-              Name:
-              <input type="text" name="name" required />
-            </label>
-            <label>
-              Email:
-              <input type="email" name="email" required />
-            </label>
-            <label>
-              Message:
-              <textarea name="message" required />
-            </label>
-            <h1> <button type="submit">Send </button></h1>
-          </form>
-        )}
-      </div>
+    <div className="formbox">
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <h1>Contact Us</h1>
+        <div className="form-group">
+          <label htmlFor="email">Personal Email</label>
+          <input
+            required
+            name="email"
+            id="email"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">How Can I Help You?</label>
+          <textarea
+            required
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+          />
+        </div>
+        <button type="submit">Submit</button>
+        {submitted && <div className="submitted-message">Thank you for contacting us!</div>}
+      </form>
     </div>
   );
 };
 
-export default Contact;
+export default ContactForm;

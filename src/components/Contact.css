@@ -1,6 +1,8 @@
 /* Contact.css */
-
- 
+body {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+}
 
 .formbox {
   display: flex;
@@ -8,68 +10,69 @@
   align-items: center;
   animation: fadeIn 2s ease-in-out;
   padding: 20px;
- 
 }
-
-/* .upline {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.upline1 {
-  width: 100px;
-  height: 5px;
-  background-color: #3498db;
-  animation: slideIn 2s ease-in-out forwards;
-} */
 
 .contact-form {
   border-radius: 10px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   max-width: 700px;
   width: 100%;
+  padding: 20px;
+  background-color: #1f1f1f; /* Dark form background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow for dark theme */
+  box-shadow: 2px 2px 20px rgba(0, 255, 255, 0.305);
 }
 
 .contact-form h1 {
   margin-bottom: 20px;
-  color: #333;
+  color: #fff; /* Light heading color */
   text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .contact-form label {
   display: block;
-  margin-bottom: 20px;
-  color: #555;
+  margin-bottom: 10px;
+  color: #bbb; /* Light gray for labels */
+  font-size: 1rem;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #555; /* Darker border color */
   border-radius: 5px;
+  background-color: #333; /* Dark background for inputs */
+  color: #e0e0e0; /* Light text color */
   box-sizing: border-box;
+  font-size: 1rem;
   transition: border-color 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #3498db;
+  border-color: #3498db; /* Blue border on focus */
   outline: none;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 150px;
 }
 
 .contact-form button {
   background-color: #3498db;
   color: #fff;
-  padding: 10px 15px;
+  padding: 12px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
   font-weight: 500;
   font-size: 16px;
+  width: 100%;
 }
 
 .contact-form button:hover {
@@ -78,9 +81,10 @@
 }
 
 .submitted-message {
-  color: green;
+  color: #66ff66; /* Light green for success message */
   font-size: 18px;
   text-align: center;
+  margin-top: 20px;
 }
 
 @keyframes fadeIn {
@@ -89,14 +93,5 @@
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100px;
   }
 }

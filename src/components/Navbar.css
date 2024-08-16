@@ -1,116 +1,126 @@
-body {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
+/* Global Styles */
+ 
+/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  padding: 0px 40px;
+  background-color: #121212; /* Dark background for navbar */
 }
-.logoheading{
+
+.logoheading {
   font-size: 3rem;
   color: #00ced1;
-}
-.navbar button {
-  background-color: transparent;
-  border: none;
 }
 
 .navbar .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 150px;
-  padding: 0 40px;
-}
-.navbar .logo h1{
-  font-size: 2.2rem;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.navbar .btn {
+.navbar button {
+  background-color: transparent;
+  border: none;
+  color: #e0e0e0;
   font-size: 30px;
-  display: none;
-}
-
-.list ul {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  padding: 0;
-  margin: 10px;
-}
-
-.list ul li {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: rgb(161, 154, 154);
   cursor: pointer;
 }
 
-.list ul li:hover {
-  color: #000;
+/* Default state (hidden) */
+.list {
+  display: none;
 }
 
-/* Media Queries for responsiveness */
+/* Shown state */
+.list1 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 15%; /* Adjusted position */
+  background-color: rgba(41, 41, 41, 0.7); /* Semi-transparent background for blur effect */
+  width: 100%; /* Full width dropdown on mobile */
+  text-align: center;
+  padding: 20px 0;
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
+.list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list1 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list ul li,
+.list1 ul li {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #a1a1a1;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.list ul li:hover,
+.list1 ul li:hover {
+  color: #fff;
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    padding: 0 30px;
   }
 
-  .navbar .list1 ul {
-    display: block;
-    position: absolute;
-    left: 15px;
-    transition: 2s all ease-in-out;
+  .logoheading {
+    font-size: 2.5rem;
   }
 
-  .navbar .btn {
+  /* Show the button and dropdown for mobile */
+  .btn {
     display: block;
-    transition: 0.3s all;
   }
 
   .list1 ul {
-    flex-direction: column;
-    background-color: rgb(229, 239, 248);
+    background-color: #333; /* Darker background for the dropdown */
     border-radius: 5px;
     padding: 10px;
-    list-style: none;
-  }
-
-  .list ul {
-    display: none;
   }
 
   .list1 ul li {
     margin: 10px 0;
-    background-color: aqua;
-    width: 290px;
-    text-align: center;
-    color: #000;
-    font-weight: 500;
+    background-color: #444; /* Slightly lighter background for items */
     border-radius: 5px;
+    color: #e0e0e0;
   }
 
   .list1 ul li:hover {
-    background-color: #00ced1; /* Change to a slightly darker color on hover */
-    color: #fff; /* Change text color on hover */
+    background-color: #00ced1;
+    color: #121212; /* Dark text on hover */
   }
 }
 
+/* Small devices */
 @media (max-width: 480px) {
-  .navbar ul li {
-    padding: 10px;
+  .navbar {
+    padding: 10px 20px;
   }
 
-  .navbar svg {
-    font-size: 30px;
+  .logoheading {
+    font-size: 2rem;
+  }
+
+  .navbar button {
+    font-size: 25px;
   }
 
   .list1 ul li {
@@ -118,12 +128,8 @@ body {
     margin: 8px 0;
   }
 
-  .list {
-    display: none;
-  }
-
   .list1 ul li:hover {
-    background-color: #00ced1; /* Change to a slightly darker color on hover */
-    color: #fff; /* Change text color on hover */
+    background-color: #00ced1;
+    color: #121212;
   }
 }
